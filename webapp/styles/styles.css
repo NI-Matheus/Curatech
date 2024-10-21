@@ -1,0 +1,317 @@
+:root {
+  /* Colors */
+  --color-bg-dark: #0369a1;
+  --color-bg-medium: #f4f4f5;
+  --color-bg-light: #ffffff;
+  --color-text-light: #f0f9ff;
+  --color-text-default: #000000;
+  --color-text-dark: #616060;
+  --color-bg-buttons: #0369a1;
+  --color-bg-buttons-hover:#021841;
+  --color-bg-card: #ffffff;
+
+ /* Font Sizes */
+  --font-size-logo: 1.5em;
+  --font-size-default: 1em;
+  --font-size-greeting: 0.8em; /* 4x smaller than default font size */
+  --font-size-username: 2em;
+  --font-size-username-right:1.2em;
+  --font-size-buttons:0.9rem;
+  --font-size-section-title:1rem;
+  --font-size-project-card-title:.9rem;
+  --font-size-project-card-text:.8rem;
+
+
+  /* Font Weight */
+  --font-weight-sidebar: bold;
+  --font-weight-header: bold;
+  --font-weight-main: bold;
+  --font-weight-card: bold;
+
+  /* Spacing */
+  --spacing-sidebar-padding: 20px;
+  --spacing-nav-gap: 20px;
+  --spacing-content-padding: 15px;
+  --border-radius-card: 5px;
+
+  /* Heights */
+  --height-header: 20%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  background-color: var(--color-bg-dark);
+  font-weight: var(--font-weight-sidebar);
+  color: var(--color-text-light);
+  padding: var(--spacing-sidebar-padding);
+  height: 100%;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.dashboard-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  padding: 10px 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+nav ul li .text, .sidebar-text {
+  margin-left: 7px; /* Adjust the margin to create space */
+}
+
+.sidebar nav ul li:nth-child(7) {
+  margin-top: 2em; /* Adjust the height to create the desired gap */
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-header);
+  align-items: center;
+  height: var(--height-header);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding-left: 3em;
+  grid-column: 1 / 2;
+}
+
+.search-bar {
+  border: none;
+  border-radius: 1em;
+  width: 80%;
+  height: 30px;
+  font-size: var(--font-size-default);
+  background-color: var(--color-bg-medium);
+  color: var(--color-text-default);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  padding-left: 3em;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  margin-right: 10px;
+  background-color: var(--color-text-light);
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-text .greeting {
+  font-size: var(--font-size-greeting);
+  display: block;
+}
+
+.profile-text .username {
+  font-size: var(--font-size-username);
+  display: block;
+}
+
+.right-container {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+.profile-photo-small {
+  border-radius: 50%;
+  height: 35px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.username {
+  font-size: var(--font-size-username-right);
+}
+
+.button-container {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.header-button {
+  background-color: var(--color-bg-buttons);
+  color: var(--color-text-light);
+  font-size: var(--font-size-buttons);
+  font-weight: var(--font-weight-header);
+  border: none;
+  border-radius: 1.5em;
+  padding: 0.5em 1.75em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: var(--color-bg-buttons-hover);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  height: 80%;
+  padding: var(--spacing-content-padding);
+  background-color: var(--color-bg-medium);
+  display: grid;
+  gap: var(--spacing-content-padding);
+  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-areas: "projects announcement"
+                      "projects trending";
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+.section-title {
+  font-size: var(--font-size-section-title);
+  margin-bottom: .5em;
+}
+
+.project-card, .announcements-card, .trending-card {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-default);
+  padding: var(--spacing-card-padding);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-card-margin);
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+  overflow: auto; /* Allow internal scrolling if needed */
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px; /* Adjust the width of the stripe as needed */
+  height: 100%;
+  background-color: rgb(236, 221, 3);
+  border-top-left-radius: 5px; /* Match the card's border radius */
+  border-bottom-left-radius: 5px; /* Match the card's border radius */
+  z-index: 10;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.project-card-title {
+  font-size: var(--font-size-project-card-title);
+}
+
+.project-card-text {
+  font-size: var(--font-size-project-card-text);
+  color: var(--color-text-dark);
+}
+
+.p-card-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.svg-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.announcements {
+  grid-area: announcement;
+}
+
+.trending {
+  grid-area: trending;
+}

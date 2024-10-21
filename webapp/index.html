@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/svg-icons/view-dashboard.svg" alt="Dashboard Icon" class="icon sidebar-icon dashboard-icon">
+                <span class=sidebar-header-text>Curatech</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><img src="assets/svg-icons/home.svg" alt="Home Icon" class="icon sidebar-icon"> <span class="text">Agenda</span></li>
+                    <li><img src="assets/svg-icons/card-account-details-outline.svg" alt="Profile Icon" class="icon sidebar-icon"> <span class="text">Prontuário</span></li>
+                    <li><img src="assets/svg-icons/message-reply.svg" alt="Messages Icon" class="icon sidebar-icon"> <span class="text">Marketing</span></li>
+                    <li><img src="assets/svg-icons/clock-time-three.svg" alt="History Icon" class="icon sidebar-icon"> <span class="text">Finanças</span></li>
+                    <li><img src="assets/svg-icons/file-multiple.svg" alt="Tasks Icon" class="icon sidebar-icon"> <span class="text">Teleconsulta</span></li>
+                    <li><img src="assets/svg-icons/account-group.svg" alt="Communities Icon" class="icon sidebar-icon"> <span class="text">Gestão</span></li>
+                    <li><img src="assets/svg-icons/cog.svg" alt="Settings Icon" class="icon sidebar-icon"> <span class="text">Configurações</span></li>
+                    <li><img src="assets/svg-icons/help-box.svg" alt="Support Icon" class="icon sidebar-icon"> <span class="text">Suporte</span></li>
+                    <li><img src="assets/svg-icons/shield-check.svg" alt="Privacy Icon" class="icon sidebar-icon"> <span class="text">Sair</span></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+        <header class="header">
+
+            <div class="search-container">
+                <img src="assets/svg-icons/magnify.svg" alt="Search Icon" class="icon header-icon">
+                <input type="text" class="search-bar" placeholder="">
+            </div>
+
+            <div class="profile-container">
+                <img
+                    src="assets/images/bluelionsmall.jpg"
+                    srcset="assets/images/bluelionsmall.jpg 1000w,
+                            assets/images/bluelionmedium.jpg 2000w"
+                    sizes="(max-width: 600px) 1000px,
+                        (max-width: 1024px) 2000px,
+                        2000px"
+                    alt="Profile Photo"
+                    class="profile-photo">
+
+                <div class="profile-text">
+                    <span class="greeting">Olá,</span>
+                    <span class="username">@usernametag</span>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <img src="assets/svg-icons/bell-ring-outline.svg" alt="Bell Icon" class="icon header-icon">
+                <img src="profile-photo-small.jpg" alt="Profile Photo" class="profile-photo-small">
+                <span class="username">usernametag</span>
+            </div>
+            <div class="button-container">
+                <button class="header-button">New</button>
+                <button class="header-button">Upload</button>
+                <button class="header-button">Share</button>
+        </header>
+            <main class="content">
+                <section class="projects">
+                    <h2 class="section-title">Pacientes do dia</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3 class="project-card-title">Nome do paciente</h3>
+                            <p class="project-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quos sed natus vel
+                                nihil modi asperiores recusandae ipsum quisquam a.
+                            </p>
+                            <div class="p-card-btns">
+                                <button class="svg-button">
+                                    <img class="icon card-icon" src="assets/svg-icons/star-plus-outline.svg" alt="add-favorite">
+                                </button>
+                                <button class="svg-button">
+                                    <img class="icon card-icon" src="assets/svg-icons/eye-plus-outline.svg" alt="add-watcher">
+                                </button>
+                                <button class="svg-button">
+                                    <img class="icon card-icon" src="assets/svg-icons/source-fork.svg" alt="source-fork">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-card"></div>
+                        <div class="project-card"></div>
+                        <div class="project-card"></div>
+                        <div class="project-card"></div>
+                        <div class="project-card"></div>
+                    </div>
+                </section>
+                <section class="announcements">
+                    <h2 class="section-title">Announcements</h2>
+                    <div class="announcements-card"></div>
+                </section>
+
+                <section class="trending">
+                    <h2 class="section-title">Trending</h2>
+                    <div class="trending-card"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
